@@ -1,0 +1,82 @@
+public class ReverseString {
+
+	public static void main(String[] args) 
+	{
+		String orginal = "Naveen is bad boy";
+		System.out.println("Orginal String is : "+orginal);
+		
+		Case1 c = new Case1();
+		c.m1();
+		System.out.println("");
+		Case2 c2 = new Case2();
+		c2.m2();
+		System.out.println("");
+		Case3 c3 = new Case3();
+		c3.m3();
+	}
+}
+class Case1
+{
+	public void m1()
+	{
+		String s ="Naveen is bad boy";
+		char ch[] = s.toCharArray();
+		int m = ch.length;
+		int l = m;
+		for(int i=0;i<m;i++)
+		{
+			char k =ch[l=l-1];
+			System.out.print(k);
+		}
+	}
+}
+class Case2
+{
+	public  void m2()
+	{
+		String s = "Naveen is bad boy";
+		String[] y = s.split(" ");
+		for(int i=0;i<y.length;i++)
+		{
+			String f = y[i];
+			char j[] = f.toCharArray();
+			int z = j.length;
+			int x = z;
+			char k = 0;
+			for(int w =0;w<z;w++)
+			{
+				k = j[x = x-1 ];
+				System.out.print(k);
+			}
+			System.out.print(" ");
+		}
+	}
+}		
+class Case3
+{
+	public  void m3()
+	{
+		String s = "Naveen is bad boy";
+		String[] y = s.split(" ");
+		for(int i=0;i<y.length;i++)
+		{
+			if(i%2==0) 
+			{
+				System.out.print(y[i]);
+			}
+			if(i%2!=0) 
+			{
+				String f = y[i];
+				char j[] = f.toCharArray();
+				int z = j.length;
+				int x = z;
+				for(int w =0;w<z;w++)
+				{
+					char k = j[x = x-1 ];
+					System.out.print(k);
+				}
+			}
+			System.out.print(" ");
+		}
+	}	
+}
